@@ -4,7 +4,7 @@ const userController=require("../controllers/userController");
 
 route.post("/usersave",userController.userSave);
 
-route.post("userlogin",userController.userLogin);
+route.post("/userlogin",userController.userLogin);
 
 
 module.exports=route;

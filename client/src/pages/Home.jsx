@@ -10,7 +10,7 @@ const Home=()=>{
     e.preventDefault();
     const api="http://localhost:8000/user/userlogin";
     axios.post(api,{email:email,password:password}).then((res)=>{
-      console.log(res);
+      console.log(res.data);
     })
   }
     return(
@@ -25,7 +25,7 @@ const Home=()=>{
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" name='password' value={password} onChange={(e)=>{setPassword(e.target.password)}}/>
+        <Form.Control type="password" name='password' value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
       </Form.Group>
       <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
